@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.aminivan.navigationcomponent.login.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHelp"
+            app:destination="@id/fragmentHelp" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentChat"
+            app:destination="@id/fragmentChat" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentLupas"
+            app:destination="@id/fragmentLupas" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.aminivan.navigationcomponent.login.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentHello"
+            app:destination="@id/fragmentHello" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.aminivan.navigationcomponent.login.FragmentRegister"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHelp"
+        android:name="com.aminivan.navigationcomponent.login.FragmentHelp"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/fragmentChat"
+        android:name="com.aminivan.navigationcomponent.login.FragmentChat"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/fragmentLupas"
+        android:name="com.aminivan.navigationcomponent.login.FragmentLupas"
+        android:label="fragment_lupas"
+        tools:layout="@layout/fragment_lupas" />
+    <fragment
+        android:id="@+id/fragmentHello"
+        android:name="com.aminivan.navigationcomponent.login.FragmentHello"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello" >
+        <argument
+            android:name="namaUser"
+            app:argType="string" />
+        <argument
+            android:name="tahunLahir"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.aminivan.navigationcomponent.login.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <argument
+            android:name="namaUser"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentSatu">
+
+    <fragment
+        android:id="@+id/fragmentSatu"
+        android:name="com.aminivan.navigationcomponent.FragmentSatu"
+        android:label="fragment_satu"
+        tools:layout="@layout/fragment_satu" >
+        <action
+            android:id="@+id/action_fragmentSatu_to_fragmentDua2"
+            app:destination="@id/fragmentDua2" />
+        <action
+            android:id="@+id/action_fragmentSatu_to_fragmentTiga22"
+            app:destination="@id/fragmentTiga2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDua2"
+        android:name="com.aminivan.navigationcomponent.FragmentDua"
+        android:label="fragment_dua"
+        tools:layout="@layout/fragment_dua" >
+        <action
+            android:id="@+id/action_fragmentDua2_to_fragmentTiga2"
+            app:destination="@id/fragmentTiga2" />
+        <action
+            android:id="@+id/action_fragmentDua2_to_fragmentSatu"
+            app:destination="@id/fragmentSatu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTiga2"
+        android:name="com.aminivan.navigationcomponent.FragmentTiga"
+        android:label="fragment_tiga"
+        tools:layout="@layout/fragment_tiga" >
+        <action
+            android:id="@+id/action_fragmentTiga2_to_fragmentSatu"
+            app:destination="@id/fragmentSatu" />
+        <action
+            android:id="@+id/action_fragmentTiga2_to_fragmentDua2"
+            app:destination="@id/fragmentDua2" />
+    </fragment>
+</navigation>
